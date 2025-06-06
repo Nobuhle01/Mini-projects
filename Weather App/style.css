@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out;
+  background: url('images/Weather-Desktop-Wallpaper.jpg');
+}
+
+.weather-container {
+  background: rgba(255, 255, 255, 0.9); /* semi-transparent */
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 300px;
+}
+
+
+input {
+  padding: 10px;
+  width: 80%;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  background: #4c6ef5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #3b5bdb;
+}
+
+#weatherResult {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#weatherResult img {
+  margin-top: 10px;
+}
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 40px;
+}
+
+.weather-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 600px;
+}
+
+input, button {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #4c6ef5;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #3b5bdb;
+}
+
+#weatherResult img {
+  width: 60px;
+}
+
+#hourlyForecast, #weeklyForecast {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.timeline-item {
+  background: #f0f0f0;
+  padding: 8px;
+  border-radius: 6px;
+  text-align: center;
+  min-width: 70px;
+}
