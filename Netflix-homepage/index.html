@@ -2,100 +2,186 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Netflix Clone</title>
-
-  <!-- Bootstrap 5 CDN -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Netflix Home Page</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- Custom CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Top Navigation -->
-  <nav class="position-absolute top-0 w-100 d-flex justify-content-between align-items-center p-4 z-3">
-    <h2 class="text-danger m-0">Netflix</h2>
-    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signInModal">Sign In</button>
-  </nav>
-
-  <!-- Hero Section -->
-  <div class="hero text-white d-flex flex-column justify-content-center align-items-center text-center">
-    <div class="overlay"></div>
-    <div class="content">
-      <h1 class="display-4 fw-bold">Unlimited movies, TV shows, and more</h1>
-      <p class="fs-4">Watch anywhere. Cancel anytime.</p>
-      <p class="fs-5">Starts at R59. Cancel anytime.</p>
-      <p class="fs-5">Ready to watch? Enter your email to create or restart your membership.</p>
-      <form class="d-flex justify-content-center flex-wrap">
-        <input type="email" class="form-control m-2" placeholder="Email address" />
-        <a href="setup.html" class="btn btn-danger m-2">Get Started</a>
-      </form>
-    </div>
+<!-- Header -->
+<header class="header d-flex justify-content-between align-items-center px-5 py-3 position-absolute top-0 w-100 z-3">
+  <div class="logo fs-2 fw-bold text-danger">NETFLIX</div>
+  <div class="d-flex gap-3 align-items-center">
+    <select class="form-select form-select-sm bg-dark text-white border-secondary" style="width: 120px;">
+      <option selected>English</option>
+      <option>Hindi</option>
+      <option>Spanish</option>
+      <option>IsiZulu</option>
+      <option>IsiXhosa</option>
+    </select>
+<button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#signinModal">Sign In</button>
   </div>
+</header>
 
-  <!-- Sign In Modal -->
-  <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-dark text-white p-4 rounded">
-        <div class="modal-header border-0">
-          <h4 class="modal-title" id="signInModalLabel">Sign In</h4>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+<!-- Hero -->
+<section class="hero d-flex align-items-center justify-content-center text-white text-center position-relative">
+  <div class="overlay"></div>
+  <div class="content px-3">
+    <h1 class="display-4 fw-bold">Unlimited movies, TV<br />shows and more.</h1>
+    <p class="lead">Watch anywhere. Cancel anytime.</p>
+    <p class="fs-5">Ready to watch? Enter your email to create or restart your membership.</p>
+    <form class="d-flex justify-content-center mt-3 flex-wrap gap-2">
+      <input type="email" class="form-control form-control-lg email-input" placeholder="Email address" required />
+      <button type="submit" class="btn btn-danger btn-lg d-flex align-items-center gap-2">
+        Get Started <i class="bi bi-chevron-right"></i>
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- New Releases -->
+<section class="mt-5 container">
+  <h2 class="category-title mb-4">New Releases</h2>
+  <div class="row g-4 text-center justify-content-center">
+    <!-- Card Template -->
+    <div class="col-6 col-md-3">
+      <div class="movie-card position-relative">
+        <img src="images/new1.jpg" class="img-fluid movie-img" alt="Movie 1">
+        <div class="movie-overlay">
+          <h5>Movie 1</h5>
+          <div class="d-flex gap-2 mb-2">
+            <button class="btn btn-danger btn-sm">Watch Now</button>
+            <button class="btn btn-outline-light btn-sm">Add to List</button>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown">More Info</button>
+            <div class="dropdown-menu p-2 text-start">An epic journey of action and discovery.</div>
+          </div>
         </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email or phone number</label>
-              <input type="email" class="form-control bg-secondary text-white" id="email" placeholder="Enter email">
-            </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control bg-secondary text-white" id="password" placeholder="Enter password">
-            </div>
-            <button type="submit" class="btn btn-danger w-100 mb-3">Sign In</button>
+      </div>
+    </div>
 
-            <div class="d-flex justify-content-between mb-3">
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="remember">
-                <label class="form-check-label" for="remember">Remember me</label>
-              </div>
-              <a href="#" class="text-light text-decoration-none">Forgot password?</a>
-            </div>
+    <!-- Repeat for other movies -->
+    <div class="col-6 col-md-3">
+      <div class="movie-card position-relative">
+        <img src="images/new2.jpg" class="img-fluid movie-img" alt="Movie 2">
+        <div class="movie-overlay">
+          <h5>Movie 2</h5>
+          <div class="d-flex gap-2 mb-2">
+            <button class="btn btn-danger btn-sm">Watch Now</button>
+            <button class="btn btn-outline-light btn-sm">Add to List</button>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown">More Info</button>
+            <div class="dropdown-menu p-2 text-start">A thrilling mystery unfolds.</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <div class="text-center mt-3">
-              <small>OR</small>
-            </div>
+    <div class="col-6 col-md-3">
+      <div class="movie-card position-relative">
+        <img src="images/new3.jpg" class="img-fluid movie-img" alt="Movie 3">
+        <div class="movie-overlay">
+          <h5>Movie 3</h5>
+          <div class="d-flex gap-2 mb-2">
+            <button class="btn btn-danger btn-sm">Watch Now</button>
+            <button class="btn btn-outline-light btn-sm">Add to List</button>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown">More Info</button>
+            <div class="dropdown-menu p-2 text-start">A sci-fi adventure into the unknown.</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <div class="mb-3 text-center">
-              <button type="button" class="btn btn-outline-light w-100">Use a sign-in code</button>
-            </div>
-
-            <div class="text-center mt-3">
-              <small>New to Netflix? <a href="#" class="text-decoration-none text-light">Sign up now</a></small>
-            </div>
-          </form>
+    <div class="col-6 col-md-3">
+      <div class="movie-card position-relative">
+        <img src="images/new4.jpg" class="img-fluid movie-img" alt="Movie 4">
+        <div class="movie-overlay">
+          <h5>Movie 4</h5>
+          <div class="d-flex gap-2 mb-2">
+            <button class="btn btn-danger btn-sm">Watch Now</button>
+            <button class="btn btn-outline-light btn-sm">Add to List</button>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown">More Info</button>
+            <div class="dropdown-menu p-2 text-start">Drama, suspense and emotional depth.</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- Page Footer -->
-  <footer class="bg-dark text-white text-center py-4">
-    <p>Netflix Clone &copy; 2025 | For Educational Use Only</p>
-    <div class="container mt-3">
-      <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-3 text-start text-md-center">
-        <div class="col"><a href="#" class="text-white text-decoration-none small">FAQ</a></div>
-        <div class="col"><a href="#" class="text-white text-decoration-none small">Help Center</a></div>
-        <div class="col"><a href="#" class="text-white text-decoration-none small">Terms of Use</a></div>
-        <div class="col"><a href="#" class="text-white text-decoration-none small">Privacy</a></div>
-        <div class="col"><a href="#" class="text-white text-decoration-none small">Cookie Preferences</a></div>
-        <div class="col"><a href="#" class="text-white text-decoration-none small">Corporate Information</a></div>
+<!-- Footer -->
+<footer class="footer mt-5">
+  <div class="container text-muted">
+    <div class="row row-cols-2 row-cols-md-4 g-3">
+      <div class="col">
+        <h6>Company</h6>
+        <a href="#">Jobs</a><br />
+        <a href="#">Careers</a><br />
+        <a href="#">Press</a>
+      </div>
+      <div class="col">
+        <h6>Support</h6>
+        <a href="#">Help Center</a><br />
+        <a href="#">Account</a><br />
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="col">
+        <h6>Legal</h6>
+        <a href="#">Privacy</a><br />
+        <a href="#">Terms of Use</a><br />
+        <a href="#">Cookies</a>
+      </div>
+      <div class="col">
+        <h6>Connect</h6>
+        <a href="#">Facebook</a><br />
+        <a href="#">Instagram</a><br />
+        <a href="#">Twitter</a>
       </div>
     </div>
-  </footer>
+    <div class="text-center mt-3" style="font-size: 0.8rem;">&copy; 2025 Netflix, Inc.</div>
+  </div>
+</footer>
 
-  <!-- Bootstrap Bundle JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Sign In Modal -->
+<div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="signinModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-white rounded-4 p-3">
+      <div class="modal-header border-0 pb-0">
+        <h5 class="modal-title" id="signinModalLabel">Sign In</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="signinEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control bg-secondary border-0 text-white" id="signinEmail" placeholder="name@example.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="signinPassword" class="form-label">Password</label>
+            <input type="password" class="form-control bg-secondary border-0 text-white" id="signinPassword" placeholder="Password" required>
+          </div>
+          <button type="submit" class="btn btn-danger w-100">Sign In</button>
+        </form>
+        <div class="text-center mt-3">
+          <a href="#" class="text-white-50 text-decoration-none">Forgot password?</a>
+        </div>
+        <div class="text-center mt-3">
+          <span class="text-white-50">New to Netflix?</span>
+          <a href="#" class="text-white text-decoration-none">Sign up now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
