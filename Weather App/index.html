@@ -5,24 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Weather App</title>
   <link rel="stylesheet" href="style.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 <body>
   <div class="container">
     <h1>🌦 Weather Forecast</h1>
-    <input type="text" id="cityInput" placeholder="Enter city name" />
+    
+    <input list="cityList" id="cityInput" placeholder="Enter city name..." />
+    <datalist id="cityList">
+      <option value="Johannesburg"></option>
+      <option value="Cape Town"></option>
+      <option value="Durban"></option>
+      <option value="Pretoria"></option>
+      <option value="New York"></option>
+      <option value="London"></option>
+      <option value="Paris"></option>
+      <!-- Add more popular cities -->
+    </datalist>
+    
     <button onclick="getWeather()">Search</button>
-
+    
     <div id="weatherResult"></div>
     <div id="hourlyForecast"></div>
     <button onclick="toggleWeekly()">Show Weekly Forecast</button>
   </div>
 
+  <!-- Weekly Forecast Modal -->
   <div id="weeklyModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="toggleWeekly()">&times;</span>
       <div id="weeklyForecast"></div>
     </div>
   </div>
+
+  <!-- Optional Loading Spinner -->
+  <div id="loader" class="loader" style="display: none;"></div>
 
   <script src="script.js"></script>
 </body>
