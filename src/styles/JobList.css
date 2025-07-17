@@ -1,0 +1,109 @@
+/* Container */
+.job-dashboard {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Title */
+.job-dashboard h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+/* Filters section */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.search-input,
+.dropdown {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s ease;
+  min-width: 250px;
+}
+
+.search-input:focus,
+.dropdown:focus {
+  border-color: #3498db;
+}
+
+/* Job card styling */
+.job-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Job info */
+.job-card h3 {
+  margin-top: 0;
+  color: #2980b9;
+}
+
+.job-card p {
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+/* Action buttons */
+.actions {
+  margin-top: 15px;
+}
+
+.actions button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin-right: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.actions button:hover {
+  background-color: #217dbb;
+}
+
+.actions .save-btn {
+  background-color: #27ae60;
+}
+
+.actions .save-btn:hover {
+  background-color: #1e8449;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .filters {
+    flex-direction: column;
+    align-items: center;
+  }
+  .search-input, .dropdown {
+    width: 100%;
+    max-width: 400px;
+  }
+}
